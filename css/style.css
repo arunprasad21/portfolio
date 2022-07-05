@@ -7,6 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
   height: 70px;
   padding: 0 4.8rem;
   position: relative;
@@ -108,9 +109,11 @@
   height: 8rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: var(--navy);
+  /* background-color: var(--navy); */
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(4px) !important;
+
 }
 
 .sticky .section-hero {
@@ -297,13 +300,13 @@
 .about-img {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
 }
 .about-img img {
-  width: 70%;
+  width: 80%;
   /* height: 25rem; */
-  border-radius: 8px;
+  border-radius: 6px;
   margin: 2rem;
 }
 .about-img img::after {
