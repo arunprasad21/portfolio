@@ -11,7 +11,7 @@
   height: 70px;
   padding: 0 4.8rem;
   position: relative;
-  z-index: 11;
+  z-index: 999999;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
 }
@@ -19,6 +19,7 @@
 .nav-title {
   font-size: 3rem;
   font-family: var(--font-mono);
+  font-style: italic;
   color: var(--light-slate);
   margin-left: 2rem;
 }
@@ -530,11 +531,11 @@ ul.wrk-timeline > li:before {
 .project-descriptionlft {
   font-size: 1.5rem;
   font-family: var(--font-sans);
-  width: 500px;
+  width: 550px;
   padding: 2rem 1rem;
   background-color: var(--light-navy);
   border-radius: 4px;
-  z-index: 999;
+  z-index: 11;
 }
 .project-languageslft {
   display: flex;
@@ -602,11 +603,11 @@ ul.wrk-timeline > li:before {
 .project-descriptionrht {
   font-size: 1.5rem;
   font-family: var(--font-sans);
-  width: 500px;
+  width: 550px;
   padding: 2rem 1rem;
   background-color: var(--light-navy);
   border-radius: 4px;
-  z-index: 999;
+  z-index: 11;
 }
 .project-languagesrht {
   display: flex;
