@@ -51,6 +51,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
@@ -81,15 +82,15 @@
         <section class="section-hero">
             <section class="landing-content container-fluid ">
                 <div class="social-left col-md-1">
-                    <ul class="social-icons">
+                    <ul class="social-icons animate__animated animate__fadeInLeft">
                         <li class="social-icon"><a href="https://www.linkedin.com/in/arun-prasad21/" target="_blank"
-                                rel="noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                                rel="noreferrer" aria-label="social-link"><i class="fa-brands fa-linkedin"></i></a>
                         </li>
                         <li class="social-icon"><a href="https://github.com/arunprasad21" target="_blank"
-                                rel="noreferrer"><i class="fa-brands fa-github"></i></a></li>
-                        <li class="social-icon"><a href="#" target="_blank" rel="noreferrer"><i
+                                rel="noreferrer" aria-label="social-link"><i class="fa-brands fa-github"></i></a></li>
+                        <li class="social-icon"><a href="#" target="_blank" rel="noreferrer" aria-label="social-link"><i
                                     class="fa-brands fa-instagram"></i></a></li>
-                        <li class="social-icon"><a href="#" target="_blank" rel="noreferrer"><i
+                        <li class="social-icon"><a href="#" target="_blank" rel="noreferrer" aria-label="social-link"><i
                                     class="fa-brands fa-twitter"></i></a></li>
 
                     </ul>
@@ -97,10 +98,12 @@
                 <div class="main-content col-md-10 ">
                     <section class="section-margin landing-text">
                         <div class="headings">
-                            <h3 class="heading-hi">Hi👋, my name is</h3>
-                            <h3 class="heading-name">Arun Prasad.</h3>
-                            <h3 class="heading-position">I build things for the web.</h3>
-                            <p class="heading-about">I am a 23-year-old Frontend Developer who develops clean,
+                            <h1 class="heading-hi wow animate__fadeInDown" data-wow-duration="1s">Hi👋, my name is</h1>
+                            <h2 class="heading-name wow animate__fadeInDown" data-wow-duration="1.5s">Arun Prasad.</h2>
+                            <h2 class="heading-position wow animate__fadeInDown" data-wow-duration="1.5s">I build things
+                                for the web.</h2>
+                            <p class="heading-about wow animate__fadeInDown" data-wow-duration="1.5s">I am a 23-year-old
+                                Frontend Developer who develops clean,
                                 appealing, and functional interfaces. And I enjoy creating things that live on the
                                 internet. My main focus these days is building accessible, inclusive products and
                                 digital experiences for the users.
@@ -110,25 +113,23 @@
                         </div>
 
                     </section>
+
+
+
                     <!-- ABOUT SECTION -->
                     <section id="about-me" class="scrolltop">
                         <div class="section-margin aboutus-section ">
-                            <div class="numbered-heading ">
+                            <div class="numbered-heading wow animate__fadeInLeft" data-wow-duration="1s">
                                 <span>01.</span>
                                 <h2>About Me</h2>
                             </div>
                             <div class="aboutus-content">
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 wow animate__fadeInUp"
+                                    data-wow-duration="2s">
                                     <p class="paragraph">Hello! My name is Arun Prasad and I enjoy creating things that
-                                        live
-                                        on
-                                        the internet. My interest in web development started back in 2020 when I decided
-                                        to
-                                        try
-                                        editing custom themes — turns out hacking together a custom button taught me a
-                                        lot
-                                        about
-                                        HTML & CSS!</p>
+                                        live on the internet. My interest in web development started back in 2020 when I decided
+                                        to try editing custom themes — turns out hacking together a custom button taught me a
+                                        lot about HTML & CSS!</p>
                                     <p class="paragraph">Fast-forward to today, and I’ve had the privilege of working at
                                         <a href="https://www.megamsolutions.com/" target="_blank"
                                             aria-label="megam-site" rel="noreferrer" class="hoverEffect fromLeft">a
@@ -143,15 +144,16 @@
                                         build a web app with the Spotify API using Node & React.</p> -->
                                     <ul class="timeline">
                                         <li>
-                                            <a target="_blank" href="https://vaigai.org.in/"
-                                                class="hoverEffect fromLeft">Vaigai
+                                            <a target="_blank" href="https://vaigai.org.in/" aria-label="megam-site"
+                                                rel="noreferrer" class="hoverEffect fromLeft">Vaigai
                                                 College Of
                                                 Engineering </a>
                                             <p>Computer Science And Engineering</p>
                                             <p>2016 - 2020</p>
                                         </li>
                                         <li>
-                                            <a class="hoverEffect fromLeft">Cathy Matriculation Hr. Sec. School
+                                            <a href="#" aria-label="school-site" rel="noreferrer"
+                                                class="hoverEffect fromLeft">Cathy Matriculation Hr. Sec. School
                                             </a>
                                             <p>Both 10th And 12th Standard</p>
                                         </li>
@@ -172,7 +174,8 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 about-img">
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 about-img wow animate__fadeInUp"
+                                    data-wow-duration="2s">
                                     <img src="images/pp/arun prasad.webp" loading="lazy" alt="profile-img" class="" />
                                 </div>
                             </div>
@@ -182,7 +185,7 @@
                     <!-- EXPERIENCE SECTION -->
                     <section id="experience" class="scrolltop">
                         <div class="section-margin work-section">
-                            <div class="numbered-heading ">
+                            <div class="numbered-heading wow animate__fadeInLeft" data-wow-duration="1s">
                                 <span>02.</span>
                                 <h2>Where I’ve Worked</h2>
                             </div>
@@ -210,45 +213,55 @@
                                 </div> -->
                                 <ul class="wrk-timeline">
                                     <li>
-                                        <p class="wrk-histroy">Systems Engineer <a target="_blank"
-                                                href="https://www.infosys.com/" class="hoverEffect fromLeft"> @ Infosys
-                                            </a>
-                                        </p>
-                                        <h5 class="wrk-experience">Jan 2022 - Present</h5>
-                                        <div class="wrk-description">
+                                        <div class="wow animate__fadeInUp" data-wow-duration="1s">
+                                            <p class="wrk-histroy">Systems Engineer <a target="_blank"
+                                                    href="https://www.infosys.com/" aria-label="company-link"
+                                                    class="hoverEffect fromLeft"> @
+                                                    Infosys
+                                                </a>
+                                            </p>
+                                            <h3 class="wrk-experience">Jan 2022 - Present</h3>
+                                            <div class="wrk-description">
 
-                                            <ul>
-                                                <li>Frontend developer in Infosys Equinox.</li>
-                                                <li>Completed Infosys Frontend Web Developer Certification.</li>
-                                            </ul>
+                                                <ul>
+                                                    <li>Frontend developer in Infosys Equinox.</li>
+                                                    <li>Completed Infosys Frontend Web Developer Certification.</li>
+                                                </ul>
+                                            </div>
+
                                         </div>
+
                                     </li>
                                     <li>
-                                        <p class="wrk-histroy">Web Developer <a target="_blank"
-                                                href="https://www.megamsolutions.com/" class="hoverEffect fromLeft"> @
-                                                Megam
-                                                Solutions </a></p>
+                                        <div class="wow animate__fadeInUp" data-wow-duration="1s">
+                                            <p class="wrk-histroy">Web Developer <a target="_blank"
+                                                    href="https://www.megamsolutions.com/" aria-label="company-link"
+                                                    class="hoverEffect fromLeft">
+                                                    @ Megam Solutions </a></p>
 
-                                        <h5 class="wrk-experience">Jan 2021 - Jan 2022</h5>
-                                        <div class="wrk-description">
-                                            <ul>
-                                                <li>Created and Maintained 3 Websites for IIT Madras (from scratch,
-                                                    re-design,
-                                                    seasonal
-                                                    updates).</li>
-                                                <li>Work with a variety of different languages, platforms, frameworks,
-                                                    and
-                                                    content management systems such as JavaScript, React, Hugo,
-                                                    WordPress,
-                                                    Drupal, and Raphael JS.</li>
-                                                <li>Assessed UX and UI designs for technical feasibility.</li>
-                                                <li>Collaborated with product team members to implement new feature
-                                                    developments.</li>
-                                                <li> Worked in websites optimization and SEO.</li>
-                                                <li>Worked in an Agile, Collaborative environment to receive design
-                                                    requirements, peer programs, and test websites.</li>
-                                            </ul>
+                                            <h3 class="wrk-experience">Jan 2021 - Jan 2022</h3>
+                                            <div class="wrk-description">
+                                                <ul>
+                                                    <li>Created and Maintained 3 Websites for IIT Madras (from scratch,
+                                                        re-design,
+                                                        seasonal
+                                                        updates).</li>
+                                                    <li>Work with a variety of different languages, platforms,
+                                                        frameworks,
+                                                        and
+                                                        content management systems such as JavaScript, React, Hugo,
+                                                        WordPress,
+                                                        Drupal, and Raphael JS.</li>
+                                                    <li>Assessed UX and UI designs for technical feasibility.</li>
+                                                    <li>Collaborated with product team members to implement new feature
+                                                        developments.</li>
+                                                    <li> Worked in websites optimization and SEO.</li>
+                                                    <li>Worked in an Agile, Collaborative environment to receive design
+                                                        requirements, peer programs, and test websites.</li>
+                                                </ul>
+                                            </div>
                                         </div>
+
                                     </li>
                                 </ul>
                             </div>
@@ -258,15 +271,16 @@
                     <!-- PROJECT WORK SECTION -->
                     <section id="projects" class="scrolltop">
                         <div class="section-margin project-section" id="projects">
-                            <div class="numbered-heading ">
+                            <div class="numbered-heading wow animate__fadeInLeft" data-wow-duration="1s">
                                 <span>03.</span>
                                 <h2>Some Things I’ve Built</h2>
                             </div>
                             <!-- Project Card  -->
-                            <div class="col-md-12  col-xs-12 mt-5 project-contentrht">
-                                <div class="col-md-21 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailsrht">
+                            <div class="col-md-12  col-xs-12 my-5 project-contentrht">
+                                <div class="col-md-21 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailsrht wow animate__fadeInLeft"
+                                    data-wow-duration="1s">
                                     <h3 class="heading-featuredrht">Featured Project</h3>
-                                    <h2 class="heading-projectrht">Tenor Gif Clone </h2>
+                                    <h3 class="heading-projectrht">Tenor Gif Clone </h3>
                                     <p class="project-descriptionrht">
                                         This is the clone website of Tenor.com. Data is fetched using Tenor API.
                                         Infinite Scroll is implemented.
@@ -279,30 +293,33 @@
                                             <li>CSS</li>
                                         </ul>
                                         <a class="project-linkrht" href="https://arunprasad21.github.io/Tenor-Clone/"
-                                            target="_blank" rel="noreferrer">
+                                            target="_blank" aria-label="Project-link" rel="noreferrer">
                                             <i class="fa-solid fa-up-right-from-square"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imgrht">
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imgrht wow animate__fadeInRight"
+                                    data-wow-duration="1.5s">
                                     <div class="prj-img">
-                                        <img src="images/Tenor.png" alt="project Image">
+                                        <img src="images/Tenor.webp" loading="lazy" alt="project Image">
                                         <!-- <div class="overlay"></div> -->
                                     </div>
 
                                 </div>
                             </div>
                             <!-- Project Card  -->
-                            <div class="col-md-12 col-lg-12 col-xs-12 mt-5 project-contentlft">
-                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imglft">
+                            <div class="col-md-12  col-xs-12 my-5 project-contentlft">
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imglft wow animate__fadeInLeft"
+                                    data-wow-duration="1.5s">
                                     <div class="prj-img">
-                                        <img src="images/ioe.png" alt="project Imag">
+                                        <img src="images/ioe.webp" loading="lazy" alt="project Image">
                                         <!-- <div class="overlay"></div> -->
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailslft">
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailslft wow animate__fadeInRight"
+                                    data-wow-duration="1s">
                                     <h3 class="heading-featuredlft">Featured Project</h3>
-                                    <h2 class="heading-projectlft">IIT Madras Research Initiatives</h2>
+                                    <h3 class="heading-projectlft">IIT Madras Research Initiatives</h3>
                                     <p class="project-descriptionlft">Static site generator website for IIT Madras
                                         Research Initiatives.
                                         Developed with the HUGO framework.
@@ -315,18 +332,19 @@
                                             <li>Bootstrap</li>
                                             <li>Sass</li>
                                         </ul>
-                                        <a class="project-linklft" href="https://ioe.iitm.ac.in/" target="_blank"
-                                            rel="noreferrer">
+                                        <a class="project-linklft" href="https://ioe.iitm.ac.in/"
+                                            aria-label="Project-link" target="_blank" rel="noreferrer">
                                             <i class="fa-solid fa-up-right-from-square"></i>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <!-- Project Card  -->
-                            <div class="col-md-12  col-xs-12 mt-5 project-contentrht">
-                                <div class="col-md-21 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailsrht">
+                            <div class="col-md-12  col-xs-12 my-5 project-contentrht">
+                                <div class="col-md-21 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailsrht wow animate__fadeInLeft"
+                                    data-wow-duration="1s">
                                     <h3 class="heading-featuredrht">Featured Project</h3>
-                                    <h2 class="heading-projectrht">IIT Madras BioTech Department </h2>
+                                    <h3 class="heading-projectrht">IIT Madras BioTech Department </h3>
                                     <p class="project-descriptionrht">
                                         Static site generator website for IIT Madras BioTech Department.
                                         Developed with the HUGO framework.
@@ -340,31 +358,34 @@
                                             <li>Sass</li>
                                         </ul>
                                         <a class="project-linkrht" href="https://biotech.iitm.ac.in/" target="_blank"
-                                            rel="noreferrer">
+                                            aria-label="Project-link" rel="noreferrer">
                                             <i class="fa-solid fa-up-right-from-square"></i>
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imgrht">
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imgrht wow animate__fadeInRight"
+                                    data-wow-duration="1.5s">
                                     <div class="prj-img">
-                                        <img src="images/iitm-bio.png" alt="project Image">
+                                        <img src="images/iitm-bio.webp" loading="lazy" alt="project Image">
                                         <!-- <div class="overlay"></div> -->
                                     </div>
 
                                 </div>
                             </div>
                             <!-- Project Card  -->
-                            <div class="col-md-12  col-xs-12 mt-5 project-contentlft">
-                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imglft">
+                            <div class="col-md-12  col-xs-12 my-5 project-contentlft">
+                                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 project-imglft wow animate__fadeInLeft"
+                                    data-wow-duration="1.5s">
                                     <div class="prj-img">
-                                        <img src="images/arvind.png" alt="project Imag">
+                                        <img src="images/arvind.webp" loading="lazy" alt="project Image">
                                         <!-- <div class="overlay"></div> -->
                                     </div>
 
                                 </div>
-                                <div class="col-md-21 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailslft">
+                                <div class="col-md-21 col-lg-6 col-sm-12 col-xs-12 m-2 project-detailslft wow animate__fadeInRight"
+                                    data-wow-duration="1s">
                                     <h3 class="heading-featuredlft">Featured Project</h3>
-                                    <h2 class="heading-projectlft">Eye hospital website</h2>
+                                    <h3 class="heading-projectlft">Eye hospital website</h3>
                                     <p class="project-descriptionlft">Website for Dr. Arvind Vision Care hospital. For
                                         Content management system Drupal is used and Html,css,js for UI.
                                     </p>
@@ -376,7 +397,7 @@
                                             <li>CSS</li>
                                         </ul>
                                         <a class="project-linklft" href="https://draravind.com/" target="_blank"
-                                            rel="noreferrer">
+                                            aria-label="Project-link" rel="noreferrer">
                                             <i class="fa-solid fa-up-right-from-square"></i>
                                         </a>
                                     </div>
@@ -387,10 +408,10 @@
 
                     <!-- CONTACT US SECTION -->
 
-                    <section id="contact" class="scrolltop">
+                    <section id="contact" class="scrolltop wow animate__fadeInUp" data-wow-duration="1.5s">
                         <div class="section-margin contact-section col-md-10">
                             <div class="col-lg-7 col-sm-12 col-xs-12">
-                                <h2 class="contact-smallHeading">04. What's Next?</h2>
+                                <h3 class="contact-smallHeading">04. What's Next?</h3>
                                 <h3 class="contact-bigHeading">Get In Touch</h3>
                                 <p class="paragraph">Although I’m currently looking for any new opportunities, my
                                     inbox
@@ -399,7 +420,8 @@
                                     Whether
                                     you have a question or just want to say hi, I’ll try my best to get back to you!
                                 </p>
-                                <a class="btn btn--large" href="mailto:arunprasadvel21@gmail.com">Say Hello</a>
+                                <a class="btn btn--large" href="mailto:arunprasadvel21@gmail.com"
+                                    aria-label="mail-link">Say Hello</a>
                             </div>
 
                         </div>
@@ -409,15 +431,17 @@
                         <div class="col-md-12 footer">
                             <ul class="footer-socialIcons">
                                 <li class="footer-socialIcon"><a href="https://www.linkedin.com/in/arun-prasad21/"
-                                        target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                                        target="_blank" aria-label="social-link" rel="noreferrer"><i
+                                            class="fa-brands fa-linkedin"></i></a>
                                 </li>
                                 <li class="footer-socialIcon"><a href="https://github.com/arunprasad21" target="_blank"
-                                        rel="noreferrer"><i class="fa-brands fa-github"></i></a></li>
-                                <li class="footer-socialIcon"><a href="#" target="_blank" rel="noreferrer"><i
-                                            class="fa-brands fa-instagram"></i></a>
+                                        aria-label="social-link" rel="noreferrer"><i
+                                            class="fa-brands fa-github"></i></a></li>
+                                <li class="footer-socialIcon"><a href="#" target="_blank" aria-label="social-link"
+                                        rel="noreferrer"><i class="fa-brands fa-instagram"></i></a>
                                 </li>
-                                <li class="footer-socialIcon"><a href="#" target="_blank" rel="noreferrer"><i
-                                            class="fa-brands fa-twitter"></i></a></li>
+                                <li class="footer-socialIcon"><a href="#" target="_blank" aria-label="social-link"
+                                        rel="noreferrer"><i class="fa-brands fa-twitter"></i></a></li>
                             </ul>
                             <!-- <p class="footer-text">Inspired from <a href="https://brittanychiang.com/" target="_blank"
                                     aria-label="Brittany" rel="noreferrer" class="hoverEffect fromLeft">Brittany Chiang</a>
@@ -427,9 +451,10 @@
                         </div>
                     </section>
                 </div>
-                <div class="mail-right col-1">
-                    <div class="mail-text">
-                        <a href="mailto:arunprasadvel21@gmail.com">arunprasadvel21@gmail.com</a>
+                <div class="mail-right col-1 ">
+                    <div class="mail-text animate__animated animate__fadeInRight">
+                        <a href="mailto:arunprasadvel21@gmail.com" aria-label="mail-link"
+                            rel="noreferrer">arunprasadvel21@gmail.com</a>
                     </div>
                 </div>
 
@@ -443,6 +468,9 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="js/script.js"></script>
 
 </body>
