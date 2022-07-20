@@ -1,4 +1,51 @@
+
+//////////////////////////////////////////////////////
+// Wow Library
 new WOW().init();
+
+///////////////////////////////////////////////////////////
+// Sticky navigation
+
+const sectionHeroEl = document.querySelector(".nav-bar");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    // console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
+
+//////////////////////////////////////////////////////
+// Hand Gesture
+
+var text = ["✋", "👋",];
+var counter = 0;
+var elem = document.getElementById("handGesture");
+var inst = setInterval(change, 1000);
+
+function change() {
+  elem.innerHTML = text[counter];
+  counter++;
+  if (counter >= text.length) {
+    counter = 0;
+    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+  }
+}
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
 
@@ -38,32 +85,7 @@ allLinks.forEach(function (link) {
   });
 });
 
-///////////////////////////////////////////////////////////
-// Sticky navigation
 
-const sectionHeroEl = document.querySelector(".nav-bar");
-
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    // console.log(ent);
-
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
-
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
-obs.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions

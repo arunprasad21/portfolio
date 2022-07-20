@@ -196,7 +196,7 @@
   font-size: 1.2rem;
   line-height: 1rem;
   letter-spacing: 0.2rem;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   color: var(--light-slate);
   transition: var(--transition);
 }
@@ -208,7 +208,7 @@
   content: "";
   display: block;
   width: 1.5px;
-  height: 20rem;
+  height: 25rem;
   margin: 0 auto;
   background-color: var(--light-slate);
 }
@@ -232,6 +232,7 @@
   justify-content: space-between;
 }
 .heading-hi {
+  display: flex;
   color: var(--green);
   font-size: 1.6rem;
   font-family: var(--font-mono);
@@ -239,6 +240,10 @@
   font-weight: 400;
   margin-bottom: 2rem;
   margin-left: 1rem;
+}
+#handGesture{
+    padding: 0 0 0 0.5rem;
+    width: 25px;
 }
 .heading-name {
   font-size: clamp(30px, 6vw, 70px);
