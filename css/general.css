@@ -1,18 +1,18 @@
 :root {
-  --dark-navy: #020c1b;
-  --navy: #0a192f;
-  --light-navy: #112240;
-  --lightest-navy: #233554;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
-  --dark-slate: #495670;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --green-tint: rgba(100, 255, 218, 0.1);
+  --primary: #fffffe;
+  --secondary: #d1d1e9;
+  --tertiary: #6246ea;
+
+  --text-primary: #26272e;
+  --text-secondary: #373947;
+  --text-tertiary: #676a7e;
+  
+  --primary-shadow: rgba(2, 12, 27, 0.7);
+  --white: #fff;
+  --tertiary-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
+  --light: #16161a;
 
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -20,7 +20,28 @@
     system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 }
+.darkmode {
+  --primary: #16161a;
+  --secondary: #242629;
+  --tertiary: #7f5af0;
 
+  
+  --text-primary: #fffffe;
+  --text-secondary: #94a1b2;
+  --text-tertiary: rgb(150, 152, 172);
+  
+  --primary-shadow: rgba(2, 12, 27, 0.7);
+  --white: #fff;
+  --tertiary-tint: rgba(100, 255, 218, 0.1);
+  --pink: #f57dff;
+  --blue: #57cbff;
+  --light: #fffffe;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
 * {
   margin: 0;
   padding: 0;
@@ -38,13 +59,14 @@ body {
   font-family: var(--font-sans) !important;
   line-height: 1;
   font-weight: 400;
-  color: var(--light-slate) !important;
-  background-color: var(--navy) !important;
+  color: var(--text-secondary) !important;
+  background-color: var(--primary) !important;
   width: 100%;
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
   /* overflow-y: scroll; */
+  transition: var(--transition);
 }
 ol,
 ul {
@@ -55,10 +77,10 @@ a {
   text-decoration: none !important;
   transition: var(--transition);
   cursor: pointer;
-  color: var(--green);
+  color: var(--tertiary);
 }
 a:hover {
-  color: var(--green);
+  color: var(--tertiary);
 }
 p {
   margin: 0 0 20px !important;
@@ -67,12 +89,12 @@ img {
   max-width: 100%;
 }
 .scrolltop::before {
-    content: '';
-    display: block;
-    position: relative;
-    width: 0;
-    height: 100px;
-    margin-top: -100px;
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  height: 100px;
+  margin-top: -100px;
 }
 
 .btn,
@@ -82,19 +104,20 @@ img {
   text-decoration: none;
   font-family: var(--font-mono) !important;
   font-weight: 400;
-  border: 1px solid var(--green) !important;
+  border: 1px solid var(--tertiary) !important;
   border-radius: 4px;
   cursor: pointer;
   background-color: transparent;
-  color: var(--green) !important;
+  color: var(--tertiary) !important;
   line-height: 1;
   transition: var(--transition);
   box-shadow: none !important;
 }
 .btn:hover,
 .btn:active {
-  background-color: var(--green-tint);
-  color: var(--green) !important;
+  background-color: var(--tertiary);
+  color: var(--white) !important;
+  font-weight: 500;
 }
 .btn--small:link,
 .btn--small:visited {
@@ -112,8 +135,8 @@ img {
   margin-top: 2rem;
 }
 ::selection {
-  background-color: var(--lightest-navy);
-  color: var(--lightest-slate);
+  background-color: var(--secondary);
+  color: var(--text-primary);
 }
 
 /* ScrollBar */
@@ -123,13 +146,13 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px var(--lightest-slate);
+  box-shadow: inset 0 0 5px var(--text-primary);
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--light-slate);
+  background: var(--text-tertiary);
   border-radius: 10px;
   width: 10px;
   transition: var(--transition);
@@ -137,7 +160,7 @@ img {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--green);
+  background: var(--tertiary);
 }
 
 /*Headings*/
@@ -145,7 +168,7 @@ img {
   font-family: var(--font-sans);
   font-size: 1.8rem;
   line-height: 2.8rem;
-  color: var(--slate);
+  color: var(--text-secondary);
 }
 .numbered-heading {
   display: flex;
@@ -156,12 +179,13 @@ img {
   animation-duration: 2s; /* don't forget to set a duration! */
 }
 .numbered-heading span {
-  color: var(--green);
-  font-size: inherit;
+  color: var(--tertiary);
   font-family: var(--font-mono);
+  font-size: inherit;
+  font-weight: 600;
 }
 .numbered-heading h2 {
-  color: var(--lightest-slate);
+  color: var(--text-primary);
   font-size: inherit;
   font-weight: 700;
   margin: 0 0 0 0.8rem;
@@ -172,6 +196,6 @@ img {
   width: 30rem;
   height: 0.1rem;
   margin: 0 2rem;
-  background-color: var(--lightest-navy);
+  background-color: var(--secondary);
   align-items: left;
 }
