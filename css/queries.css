@@ -109,7 +109,7 @@
   .aboutus-content {
     flex-direction: column;
   }
-  .about-img img {
+  .about-image {
     width: 90%;
     align-items: center;
     margin: 5rem 2rem 2rem;

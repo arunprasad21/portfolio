@@ -242,10 +242,10 @@
 }
 .wave-emoji {
   font-size: 1.7rem;
+  display: inline-block;
+  animation-name: wave;
   animation-duration: 1.8s;
   animation-iteration-count: infinite;
-  animation-name: wave;
-  display: inline-block;
   transform-origin: 70% 70%;
 }
 
@@ -347,11 +347,15 @@
   align-items: flex-end;
   justify-content: center;
 }
-.about-img img {
-  width: 80%;
+.about-image {
   /* height: 25rem; */
+  width: 75%;
+  margin: 0 1rem;
   border-radius: 6px;
-  margin: 2rem;
+
+}
+.about-image img {
+  border-radius: 6px;
 }
 .about-img img::after {
   /* content: "";
