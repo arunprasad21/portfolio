@@ -1,6 +1,50 @@
-//////////////////////////////////////////////////////
-// Wow Library
-new WOW().init();
+///////////////////////////////////////////////////////////
+// Make mobile navigation work
+
+const btnNavEl = document.querySelector(".btn-mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNavEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
+
+// CLose Navigation
+
+const allLinks = document.querySelectorAll("a:link");
+
+allLinks.forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    // Close mobile naviagtion
+    if (link.classList.contains("main-nav-link"))
+      headerEl.classList.toggle("nav-open");
+  });
+});
+///////////////////////////////////////////////////////////
+// Sticky navigation
+
+const sectionHeroEl = document.querySelector(".nav-bar");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+    const ent = entries[0];
+    // console.log(ent);
+
+    if (ent.isIntersecting === false) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting === true) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    // In the viewport
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+obs.observe(sectionHeroEl);
 //////////////////////////////////////////////////////
 // Scroll to add shadow to navbar
 window.addEventListener("scroll", (e) => {
@@ -11,7 +55,26 @@ window.addEventListener("scroll", (e) => {
     nav.classList.remove("add-shadow");
   }
 });
-
+//////////////////////////////////////////////////////
+// Active Navlink according to section
+$(document).ready(function () {
+    $(document).on("scroll", function onScroll(event) {
+      var scrollPos = $(document).scrollTop();
+      $(".main-nav a").each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (
+          refElement.position().top - 200 <= scrollPos &&
+          refElement.position().top - 200 + refElement.height() > scrollPos
+        ) {
+          $(".main-nav ul li a").removeClass("active");
+          currLink.addClass("active");
+        } else {
+          currLink.removeClass("active");
+        }
+      });
+    });
+  });
 //////////////////////////////////////////////////////
 // Switch for dark and light mode
 
@@ -76,71 +139,9 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
-///////////////////////////////////////////////////////////
-// Sticky navigation
-
-const sectionHeroEl = document.querySelector(".nav-bar");
-
-const obs = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
-    // console.log(ent);
-
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
-
-    if (ent.isIntersecting === true) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    // In the viewport
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
-obs.observe(sectionHeroEl);
-
-///////////////////////////////////////////////////////////
-// Make mobile navigation work
-
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const headerEl = document.querySelector(".header");
-
-btnNavEl.addEventListener("click", function () {
-  headerEl.classList.toggle("nav-open");
-});
-
-///////////////////////////////////////////////////////////
-// Smooth scrolling animation
-
-const allLinks = document.querySelectorAll("a:link");
-
-allLinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    // e.preventDefault();
-    const href = link.getAttribute("href");
-
-    // Scroll back to top
-    if (href === "#")
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-
-    // Scroll to other links
-    if (href !== "#" && href.startsWith("#")) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: "smooth" });
-    }
-
-    // Close mobile naviagtion
-    if (link.classList.contains("main-nav-link"))
-      headerEl.classList.toggle("nav-open");
-  });
-});
+/////////////////////////////////////////////
+// Wow Library
+new WOW().init();
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
@@ -222,3 +223,11 @@ allLinks.forEach(function (link) {
 //     //do something with the callback
 //     $(this).attr('data-before','anything'); //anything is the 'content' value
 // });
+
+// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//     console.log('dark');
+// }else{
+//     console.log('light');
+// }
+
+

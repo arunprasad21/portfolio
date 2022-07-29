@@ -9,7 +9,6 @@
   
   --primary-shadow: rgba(2, 12, 27, 0.7);
   --white: #e6f1ff;
-  --tertiary-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
   --light: #16161a;
@@ -32,7 +31,6 @@
   
   --primary-shadow: rgba(2, 12, 27, 0.7);
   --white: #e6f1ff;
-  --tertiary-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
   --light: #fffffe;
@@ -151,8 +149,9 @@ img {
 }
 .btn:hover,
 .btn:active {
-  background-color: var(--tertiary-tint);
-  color: var(--tertiary) !important;
+  background-color: var(--tertiary);
+  color: var(--white) !important;
+  font-weight: 500;
 }
 .btn--small:link,
 .btn--small:visited {
@@ -197,7 +196,10 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--tertiary);
 }
-
+.active {
+    color: var(--tertiary) !important;
+    font-weight: 600 !important;
+}
 /*Headings*/
 .paragraph {
   font-family: var(--font-sans);
@@ -217,6 +219,7 @@ img {
   color: var(--tertiary);
   font-size: inherit;
   font-family: var(--font-mono);
+  font-weight: 500;
 }
 .numbered-heading h2 {
   color: var(--text-primary);
@@ -233,3 +236,5 @@ img {
   background-color: var(--secondary);
   align-items: left;
 }
+
+
