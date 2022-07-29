@@ -11,18 +11,70 @@ window.addEventListener("scroll", (e) => {
     nav.classList.remove("add-shadow");
   }
 });
-//////////////////////////////////////////////////////
-// // Switch for dark and light mode
 
-$(document).ready(function(){
-    const darkModeToggle = document.querySelector("#dark-mode-toggle");
-    darkModeToggle.addEventListener("change", () => {
-       document.body.classList.toggle("darkmode");
-    })  
-    $("#dark-mode-toggle").on("click",function () {
-        $(this).parent().toggleClass("checked");
-    })
-})
+//////////////////////////////////////////////////////
+// Switch for dark and light mode
+
+//set Icon onLoad
+window.addEventListener("load", () => {
+  if (darkMode !== "enabled") {
+    $(".dark-mode-toggle").load("click", function () {
+      $(this).attr("data-before", "🌙"); //anything is the 'content' value
+    });
+  } else {
+    $(".dark-mode-toggle").load("click", function () {
+      $(this).attr("data-before", "🌞"); //anything is the 'content' value
+    });
+  }
+});
+
+// check for saved 'darkMode' in localStorage
+
+let darkMode = localStorage.getItem("darkMode");
+
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
+const enableDarkMode = () => {
+  // 1. Add the class to the body
+  document.body.classList.add("darkmode");
+  // 2. Update darkMode in localStorage
+  localStorage.setItem("darkMode", "enabled");
+};
+
+const disableDarkMode = () => {
+  // 1. Remove the class from the body
+  document.body.classList.remove("darkmode");
+  // 2. Update darkMode in localStorage
+  localStorage.setItem("darkMode", null);
+};
+
+// If the user already visited and enabled darkMode
+// start things off with it on
+if (darkMode === "enabled") {
+  enableDarkMode();
+}
+
+// When someone clicks the button
+darkModeToggle.addEventListener("click", () => {
+  // get their darkMode setting
+  darkMode = localStorage.getItem("darkMode");
+
+  // if it not current enabled, enable it
+  if (darkMode !== "enabled") {
+    $(".dark-mode-toggle").load("click", function () {
+      //do something with the callback
+      $(this).attr("data-before", "🌞"); //anything is the 'content' value
+    });
+    enableDarkMode();
+    // if it has been enabled, turn it off
+  } else {
+    $(".dark-mode-toggle").load("click", function () {
+      //do something with the callback
+      $(this).attr("data-before", "🌙"); //anything is the 'content' value
+    });
+    disableDarkMode();
+  }
+});
 
 ///////////////////////////////////////////////////////////
 // Sticky navigation
@@ -162,43 +214,11 @@ allLinks.forEach(function (link) {
   }
 }
 */
-
-// dark mode light mode
-// // check for saved 'darkMode' in localStorage
-// // let darkMode = localStorage.getItem("darkMode");
-
-// const darkModeToggle = document.querySelector("#dark-mode-toggle");
-
-// const enableDarkMode = () => {
-//   // 1. Add the class to the body
-//   document.body.classList.add("darkmode");
-//   // 2. Update darkMode in localStorage
-//   localStorage.setItem("darkMode", "enabled");
-// };
-
-// const disableDarkMode = () => {
-//   // 1. Remove the class from the body
-//   document.body.classList.remove("darkmode");
-//   // 2. Update darkMode in localStorage
-//   localStorage.setItem("darkMode", null);
-// };
-
-// // If the user already visited and enabled darkMode
-// // start things off with it on
-// if (darkMode === "enabled") {
-//   enableDarkMode();
-// }
-
-// // When someone clicks the button
-// darkModeToggle.addEventListener("click", () => {
-//   // get their darkMode setting
-//   darkMode = localStorage.getItem("darkMode");
-
-//   // if it not current enabled, enable it
-//   if (darkMode !== "enabled") {
-//     enableDarkMode();
-//     // if it has been enabled, turn it off
-//   } else {
-//     disableDarkMode();
-//   }
+// var icon = document.querySelector(".dark-mode-toggle");
+// icon.addEventListener("click", function (event) {
+//   event.target.setAttribute("data-before", "🌙");
+// });
+// $('.dark-mode-toggle').load( 'click',function () {
+//     //do something with the callback
+//     $(this).attr('data-before','anything'); //anything is the 'content' value
 // });

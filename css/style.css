@@ -23,9 +23,11 @@
 .dark-mode-toggle:focus {
   /* background-color:red); */
   /* border-radius: 16px; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
 }
 .dark-mode-toggle::after {
-  content: "🌙";
+  content: attr(data-before);
   width: 30px;
   height: 30px;
   display: grid;
@@ -34,7 +36,7 @@
   transition: background-color 3s, transform 1s ease-in;
 }
 #dark-mode-toggle:checked + .dark-mode-toggle::after {
-  content: "🌞";
+  content: attr(data-before);
   transform: translateX(0px) rotate(360deg);
 }
 
