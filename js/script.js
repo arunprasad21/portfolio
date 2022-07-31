@@ -58,28 +58,38 @@ window.addEventListener("scroll", (e) => {
 //////////////////////////////////////////////////////
 // Active Navlink according to section
 $(document).ready(function () {
-    $(document).on("scroll", function onScroll(event) {
-      var scrollPos = $(document).scrollTop();
-      $(".main-nav a").each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-        if (
-          refElement.position().top - 200 <= scrollPos &&
-          refElement.position().top - 200 + refElement.height() > scrollPos
-        ) {
-          $(".main-nav ul li a").removeClass("active");
-          currLink.addClass("active");
-        } else {
-          currLink.removeClass("active");
-        }
-      });
+  $(document).on("scroll", function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $(".main-nav a").each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (
+        refElement.position().top - 300 <= scrollPos &&
+        refElement.position().top - 300 + refElement.height() > scrollPos
+      ) {
+        $(".main-nav ul li a").removeClass("Navactive");
+        currLink.addClass("Navactive");
+      } else {
+        currLink.removeClass("Navactive");
+      }
     });
   });
+});
 //////////////////////////////////////////////////////
 // Switch for dark and light mode
 
 //set Icon onLoad
 window.addEventListener("load", () => {
+  if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    console.log("dark");
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", null);
+    console.log("light");
+  }
   if (darkMode !== "enabled") {
     $(".dark-mode-toggle").load("click", function () {
       $(this).attr("data-before", "🌙"); //anything is the 'content' value
@@ -223,11 +233,3 @@ new WOW().init();
 //     //do something with the callback
 //     $(this).attr('data-before','anything'); //anything is the 'content' value
 // });
-
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//     console.log('dark');
-// }else{
-//     console.log('light');
-// }
-
-

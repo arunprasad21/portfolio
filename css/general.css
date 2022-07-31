@@ -6,7 +6,7 @@
   --text-primary: #26272e;
   --text-secondary: #373947;
   --text-tertiary: #676a7e;
-  
+
   --primary-shadow: rgba(2, 12, 27, 0.7);
   --white: #e6f1ff;
   --pink: #f57dff;
@@ -24,11 +24,10 @@
   --secondary: #242629;
   --tertiary: #7f5af0;
 
-  
   --text-primary: #fffffe;
   --text-secondary: #94a1b2;
   --text-tertiary: rgb(150, 152, 172);
-  
+
   --primary-shadow: rgba(2, 12, 27, 0.7);
   --white: #e6f1ff;
   --pink: #f57dff;
@@ -135,23 +134,40 @@ img {
 .btn:link,
 .btn:visited {
   display: inline-block;
-  text-decoration: none;
-  font-family: var(--font-mono) !important;
   font-weight: 400;
+  font-family: var(--font-mono) !important;
+  color: var(--tertiary) !important;
+  background-color: transparent;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
   border: 1px solid var(--tertiary) !important;
   border-radius: 4px;
-  cursor: pointer;
-  background-color: transparent;
-  color: var(--tertiary) !important;
-  line-height: 1;
-  transition: var(--transition);
-  box-shadow: none !important;
+  /* box-shadow: none !important; */
+  position: relative;
+  overflow: hidden;
+  transition: color 0.8s;
 }
 .btn:hover,
 .btn:active {
-  background-color: var(--tertiary);
   color: var(--white) !important;
   font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 0;
+  height: 100%;
+  background-color: var(--tertiary);
+  transform: skewX(40deg);
+  z-index: -1;
+  transition: width 0.8s;
+}
+.btn:hover::before {
+  width: 200%;
 }
 .btn--small:link,
 .btn--small:visited {
@@ -160,11 +176,11 @@ img {
 }
 .btn--medium:link,
 .btn--medium:visited {
-  padding: 1.4rem 1.8rem;
+  padding: 1rem 1.8rem;
   font-size: 1.4rem;
 }
 .btn--large {
-  padding: 1.7rem 2.4rem !important;
+  padding: 1.2rem 2.4rem !important;
   font-size: 1.6rem !important;
   margin-top: 2rem;
 }
@@ -196,10 +212,7 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--tertiary);
 }
-.active {
-    color: var(--tertiary) !important;
-    font-weight: 600 !important;
-}
+
 /*Headings*/
 .paragraph {
   font-family: var(--font-sans);
@@ -236,5 +249,3 @@ img {
   background-color: var(--secondary);
   align-items: left;
 }
-
-
