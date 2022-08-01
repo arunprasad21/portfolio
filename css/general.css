@@ -250,6 +250,7 @@ img {
   align-items: left;
 }
 
+/* Preloader */
 
 #loader-wrapper {
   position: fixed;
@@ -266,7 +267,7 @@ img {
   top: 50%;
   width: 100px;
   height: 100px;
-  margin: -75px 0 0 -75px;
+  margin: -50px 0 0 -50px;
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #3498db;
