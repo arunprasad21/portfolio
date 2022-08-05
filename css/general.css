@@ -33,7 +33,7 @@
   --text-secondary: #94a1b2;
   --text-tertiary: rgb(150, 152, 172);
 
-  --box-shadow-light : rgba(255, 255, 255, 0.1) 0px 2px 15px;
+  --box-shadow-light : rgba(0, 0, 0, 0.1) 0px 4px 12px;
   --box-shadow-medium : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
   --white: #e6f1ff;
@@ -178,13 +178,11 @@ img {
 .btn:hover::before {
   width: 200%;
 }
-.btn--small:link,
-.btn--small:visited {
+.btn--small{
   padding: 1rem 1.4rem;
   font-size: 1.2rem;
 }
-.btn--medium:link,
-.btn--medium:visited {
+.btn--medium {
   padding: 1rem 1.8rem;
   font-size: 1.4rem;
 }

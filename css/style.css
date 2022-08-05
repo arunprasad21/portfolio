@@ -23,7 +23,7 @@
 .dark-mode-toggle:focus {
   /* background-color:red); */
   /* border-radius: 16px; */
-  box-shadow: var(--box-shadow-medium)
+  box-shadow: var(--box-shadow-medium);
 }
 .dark-mode-toggle::after {
   content: attr(data-before);
@@ -43,7 +43,7 @@
 /* HEADER */
 /**************************/
 .add-shadow {
-    box-shadow: var(--box-shadow-light);
+  box-shadow: var(--box-shadow-light);
 }
 .header {
   display: flex;
@@ -112,7 +112,7 @@
   padding-right: 0.5rem;
 }
 
-.main-nav-link{
+.main-nav-link {
   display: inline-block;
   text-decoration: none;
   font-family: var(--font-mono);
@@ -123,18 +123,18 @@
   transition: var(--transition);
   position: relative;
 }
-.main-nav-link::after{
-    content: '';
-    width: 45%;
-    height: 1.5px;
-    background-color: var(--tertiary);
-    border-radius: 4px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform .3s ease;
+.main-nav-link::after {
+  content: "";
+  width: 45%;
+  height: 1.5px;
+  background-color: var(--tertiary);
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .main-nav-link:hover,
@@ -157,12 +157,49 @@
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
+.nav-button {
+  display: inline-block;
+  font-weight: 400;
+  font-family: var(--font-mono) !important;
+  color: var(--tertiary) !important;
+  background-color: transparent;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid var(--tertiary) !important;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.8s;
+  padding: 1rem 1.4rem;
+  font-size: 1.2rem;
+}
+.nav-button:hover {
+  color: var(--white) !important;
+  font-weight: 500;
+  box-shadow: var(--box-shadow-light);
+}
+.nav-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 0;
+  height: 100%;
+  background-color: var(--tertiary);
+  transform: skewX(40deg);
+  z-index: -1;
+  transition: width 0.8s;
+}
+.nav-button:hover::before {
+  width: 200%;
+}
 .Navactive {
   color: var(--tertiary) !important;
   font-weight: 600 !important;
 }
 .Navactive::after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 /* MOBILE */
 .btn-mobile-nav {
@@ -617,7 +654,7 @@ ul.wrk-timeline > li:before {
   width: 95%;
   height: 90%;
   background-color: var(--tertiary);
-  box-shadow: var(--box-shadow-medium)
+  box-shadow: var(--box-shadow-medium);
 }
 .project-detailslft {
   display: flex;
@@ -693,7 +730,7 @@ ul.wrk-timeline > li:before {
   width: 95%;
   height: 90%;
   background-color: var(--tertiary);
-  box-shadow: var(--box-shadow-medium)
+  box-shadow: var(--box-shadow-medium);
 }
 .project-detailsrht {
   display: flex;

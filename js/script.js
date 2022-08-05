@@ -65,7 +65,7 @@ window.addEventListener("scroll", (e) => {
 $(document).ready(function () {
   $(document).on("scroll", function onScroll(event) {
     var scrollPos = $(document).scrollTop();
-    $(".main-nav a").each(function () {
+    $(".main-nav a").each(function () { 
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
       if (
@@ -99,14 +99,14 @@ window.addEventListener("load", () => {
     $(".dark-mode-toggle").load("click", function () {
       $(this).attr("data-before", "🌞"); //anything is the 'content' value
     });
-    console.log("dark");
+    // console.log("System theme = dark");
   } else {
     disableDarkMode();
     //set Icon onLoad
     $(".dark-mode-toggle").load("click", function () {
         $(this).attr("data-before", "🌙"); //anything is the 'content' value
     });
-    console.log("light");
+    // console.log("System theme = light");
   }
 });
 // if (darkMode !== "enabled") {

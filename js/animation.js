@@ -5752,7 +5752,6 @@ var _gsScope =
     },
     y = function () {
       t(window).on("resize", function () {
-        Util.debounce(m(), 100);
       });
     };
   return {
