@@ -163,7 +163,10 @@
     top: 90px;
     padding: 5px 7px;
   }
+  #shapes-mask{
+    display: none;
 
+  }
   .social-left {
     display: none;
   }

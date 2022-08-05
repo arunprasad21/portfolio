@@ -2,16 +2,20 @@
   --primary: #fffffe;
   --secondary: #d1d1e9;
   --tertiary: #6246ea;
+  --primaryrgba : rgba(255, 255, 254, 0.5);
 
   --text-primary: #26272e;
   --text-secondary: #373947;
   --text-tertiary: #676a7e;
+    
+  --box-shadow-light : rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  --box-shadow-medium : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-  --primary-shadow: rgba(2, 12, 27, 0.7);
   --white: #e6f1ff;
-  --pink: #f57dff;
-  --blue: #57cbff;
   --light: #16161a;
+  --red: #ec3c1a;
+  --yellow : #bdbd00;
+  --lightBlue : #099;
 
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -23,16 +27,21 @@
   --primary: #16161a;
   --secondary: #242629;
   --tertiary: #7f5af0;
+  --primaryrgba : rgba(22, 22, 26, 0.5);
 
   --text-primary: #fffffe;
   --text-secondary: #94a1b2;
   --text-tertiary: rgb(150, 152, 172);
 
-  --primary-shadow: rgba(2, 12, 27, 0.7);
+  --box-shadow-light : rgba(255, 255, 255, 0.1) 0px 2px 15px;
+  --box-shadow-medium : rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
   --white: #e6f1ff;
-  --pink: #f57dff;
-  --blue: #57cbff;
   --light: #fffffe;
+  --red: #f06449;
+  --yellow : #ff0;
+  --lightBlue : #00ffff;
+
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
@@ -152,7 +161,7 @@ img {
 .btn:active {
   color: var(--white) !important;
   font-weight: 500;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: var(--box-shadow-light)
 }
 .btn::before {
   content: "";
@@ -387,3 +396,4 @@ img {
   -webkit-transition: all 0.3s 1s ease-out;
   transition: all 0.3s 1s ease-out;
 }
+
