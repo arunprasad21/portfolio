@@ -67,11 +67,20 @@
 
     <div id="loader-wrapper">
         <div id="loader"></div>
-
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-
     </div>
+
+    <audio id="audio">
+        <source src="audio/plunger-immediate.mp3" />
+    </audio>
+    <audio id="audioOn">
+        <source src="audio/switch-on.mp3" />
+    </audio>
+    <audio id="audioOff">
+        <source src="audio/switch-off.mp3" />
+    </audio>
+
     <div>
         <input type="checkbox" id="dark-mode-toggle">
         <label for="dark-mode-toggle" class="dark-mode-toggle"></label>
@@ -89,7 +98,7 @@
                     <li><a class="main-nav-link" href="#experience"><span>02.</span>Experience</a></li>
                     <li><a class="main-nav-link" href="#projects"><span>03.</span>Work</a></li>
                     <li><a class="main-nav-link" href="#contact"><span>04.</span>Contact</a></li>
-                    <li><button class="nav-button" href="images/arunresume.pdf" target="_blank">Resume</button></li>
+                    <li><button class="nav-button" onclick="window.open('/images/arunresume.pdf')" target="_blank">Resume</button></li>
                 </ul>
             </nav>
 
@@ -161,7 +170,7 @@
                                         passion for responsive website design with the ability to collaborate
                                         effectively with senior developers.
                                     </p>
-                                    <p class="paragraph" style="color:var(--text-primary)">Education :</p>
+                                    <p class="paragraph" style="color:var(--text-secondary); font-weight: 700;">Education :</p>
                                     <!-- <p class="paragraph">I also recently launched a course that covers everything you need to
                                         build a web app with the Spotify API using Node & React.</p> -->
                                     <ul class="timeline">
@@ -451,7 +460,7 @@
                     <section id="contact" class="scrolltop">
                         <div class="section-margin contact-section col-md-10 wow animate__bounce"
                             data-wow-duration="1.5s">
-                            <div class="col-lg-8 col-sm-12 col-xs-12">
+                            <div class="col-lg-7 col-sm-12 col-xs-12">
                                 <h3 class="contact-smallHeading">04. What's Next?</h3>
                                 <h3 class="contact-bigHeading">Get In Touch</h3>
                                 <p class="paragraph">Although I’m currently looking for any new opportunities, my

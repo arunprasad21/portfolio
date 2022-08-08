@@ -18,6 +18,8 @@
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 50px 0 0 50px;
+  cursor: url(../images/cursor/cursor-pointer.png),pointer !important;
+
 }
 .dark-mode-toggle:hover,
 .dark-mode-toggle:focus {
@@ -173,6 +175,7 @@
   transition: color 0.8s;
   padding: 1rem 1.4rem;
   font-size: 1.2rem;
+  cursor: url(../images/cursor/cursor-pointer.png),pointer !important;
 }
 .nav-button:hover {
   color: var(--white) !important;
@@ -451,6 +454,7 @@
   margin: 0 1rem;
   border-radius: 6px;
   box-shadow: var(--box-shadow-medium);
+  cursor: url(../images//cursor/cursor-rock.png),auto;
 }
 .about-image img {
   border-radius: 6px;
@@ -600,6 +604,7 @@ ul.wrk-timeline > li:before {
   display: inline-block;
 }
 .wrk-description li {
+    font-size: 1.6rem;
   padding-bottom: 10px;
   display: flex;
 }

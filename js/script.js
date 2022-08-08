@@ -1,4 +1,21 @@
 ///////////////////////////////////////////////////////////
+// Audio
+var audioOn = $("#audioOn")[0];
+var audioOff = $("#audioOff")[0];
+var audio = $("#audio")[0];
+audio.volume = 0.15;
+audioOn.volume = 0.5;
+audioOff.volume = 0.5;
+$(document).ready(function () {
+  $(".main-nav a,.btn,.nav-button").mouseenter(function () {
+    audio.play();
+  });
+  $(".main-nav a,.btn,.nav-button").mouseleave(function () {
+    audio.pause();
+  });
+});
+
+///////////////////////////////////////////////////////////
 // Make mobile navigation work
 
 const btnNavEl = document.querySelector(".btn-mobile-nav");
@@ -28,12 +45,9 @@ const sectionHeroEl = document.querySelector(".nav-bar");
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    // console.log(ent);
-
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
     }
-
     if (ent.isIntersecting === true) {
       document.body.classList.remove("sticky");
     }
@@ -65,7 +79,7 @@ window.addEventListener("scroll", (e) => {
 $(document).ready(function () {
   $(document).on("scroll", function onScroll(event) {
     var scrollPos = $(document).scrollTop();
-    $(".main-nav a").each(function () { 
+    $(".main-nav a").each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
       if (
@@ -86,10 +100,10 @@ $(document).ready(function () {
 //Detect system theme and set theme according to it.
 
 window.addEventListener("load", () => {
-    //Preloader
-    setTimeout(function(){
-		$('body').addClass('loaded');
-	}, 1000);
+  //Preloader
+  setTimeout(function () {
+    $("body").addClass("loaded");
+  }, 1000);
   if (
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -99,22 +113,14 @@ window.addEventListener("load", () => {
     $(".dark-mode-toggle").load("click", function () {
       $(this).attr("data-before", "🌞"); //anything is the 'content' value
     });
-    // console.log("System theme = dark");
   } else {
     disableDarkMode();
-    //set Icon onLoad
     $(".dark-mode-toggle").load("click", function () {
-        $(this).attr("data-before", "🌙"); //anything is the 'content' value
+      $(this).attr("data-before", "🌙"); //anything is the 'content' value
     });
-    // console.log("System theme = light");
   }
 });
-// if (darkMode !== "enabled") {
-// } else {
-// }
-
 // check for saved 'darkMode' in localStorage
-
 let darkMode = localStorage.getItem("darkMode");
 
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
@@ -133,11 +139,6 @@ const disableDarkMode = () => {
   localStorage.setItem("darkMode", null);
 };
 
-// If the user already visited and enabled darkMode
-// start things off with it on
-// if (darkMode === "enabled") {
-//   enableDarkMode();
-// }
 // When someone clicks the button
 darkModeToggle.addEventListener("click", () => {
   // get their darkMode setting
@@ -148,6 +149,7 @@ darkModeToggle.addEventListener("click", () => {
     $(".dark-mode-toggle").load("click", function () {
       //do something with the callback
       $(this).attr("data-before", "🌞"); //anything is the 'content' value
+      audioOn.play();
     });
     enableDarkMode();
     // if it has been enabled, turn it off
@@ -155,6 +157,7 @@ darkModeToggle.addEventListener("click", () => {
     $(".dark-mode-toggle").load("click", function () {
       //do something with the callback
       $(this).attr("data-before", "🌙"); //anything is the 'content' value
+      audioOff.play();
     });
     disableDarkMode();
   }
@@ -163,12 +166,3 @@ darkModeToggle.addEventListener("click", () => {
 /////////////////////////////////////////////
 // Wow Library
 new WOW().init();
-
-// var icon = document.querySelector(".dark-mode-toggle");
-// icon.addEventListener("click", function (event) {
-//   event.target.setAttribute("data-before", "🌙");
-// });
-// $('.dark-mode-toggle').load( 'click',function () {
-//     //do something with the callback
-//     $(this).attr('data-before','anything'); //anything is the 'content' value
-// });
