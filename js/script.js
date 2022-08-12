@@ -3,7 +3,7 @@
 var audioOn = $("#audioOn")[0];
 var audioOff = $("#audioOff")[0];
 var audio = $("#audio")[0];
-audio.volume = 0.15;
+audio.volume = 0.5;
 audioOn.volume = 0.5;
 audioOff.volume = 0.5;
 $(document).ready(function () {

@@ -163,9 +163,8 @@
     top: 90px;
     padding: 5px 7px;
   }
-  #shapes-mask{
+  #shapes-mask {
     display: none;
-
   }
   .social-left {
     display: none;
@@ -214,4 +213,3 @@
     display: flex !important;
   }
 }
-
